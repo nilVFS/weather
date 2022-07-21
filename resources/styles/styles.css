@@ -1,0 +1,213 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightGrey-1);
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --lightGrey-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+}
+
+main {
+    width: 70vw;
+    height: 60vh;
+    padding: 2em 0;
+    border-radius: 1.2em;
+    background-color: var(--lightGrey-1);
+    display: grid;
+    gap: 2em;
+    grid-template: repeat(6, minmax(20px, 1fr)) / repeat(11, minmax(25px, 1fr));
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+            -.2rem -.2rem 1.8rem var(--white);
+}
+
+.city {
+    grid-column: 5 / 8;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+            -.2rem -.2rem 1.8rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.35em;
+    border-radius: 1.2em;
+    padding: 0.4em;
+}
+
+.sun {
+    grid-column: 2 / 5;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp {
+    grid-column: 5 / 8;
+    grid-row: 2 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visible-distance {
+    grid-column: 8 / 11;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+
+.pressure-mm {
+    grid-column: 2 / 5;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+.wind-speed {
+    grid-column: 8 / 11;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+
+.form-block {
+    grid-column: 4 / 9;
+    grid-row: 5 / 7;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+
+.min-temp {
+    grid-column: 3 / 5;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+    padding: 1em;
+}
+
+.max-temp {
+    grid-column: 8 / 10;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+.circle {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+            -.2rem -.2rem 1.8rem var(--white);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    -webkit-appearance: none;
+    width: 60%;
+    padding: 1em;
+    line-height: 1.2em;
+    background-color: var(--lightGrey-1);
+    border: none;
+    border-radius: 1.5em;
+    margin-bottom: 1em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2) inset, 
+    -.2rem -.2rem 1.8rem var(--white) inset;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    width: 30%;
+    padding: 1em;
+    background-color: var(--lightGrey-2);
+    border: none;
+    border-radius: 1.5em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+input[type="submit"]:active {
+    -webkit-appearance: none;
+    width: 30%;
+    padding: 1em;
+    background-color: var(--lightGrey-2);
+    border: none;
+    border-radius: 1.5em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2) inset, 
+    -.2rem -.2rem 1.8rem var(--white) inset;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    animation: waves 4s linear 2s infinite;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+            -.2rem -.2rem 1.8rem var(--white);
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    animation: waves 4s linear 4s infinite;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+            -.2rem -.2rem 1.8rem var(--white);
+}
+
+@keyframes waves {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+}
