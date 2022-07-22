@@ -4,49 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Погода</title>
+
     <link href="resources/styles/reset.css" type="text/css" rel="stylesheet" />
     <link href="resources/styles/styles.css" type="text/css" rel="stylesheet" />
+
     <script src="https://kit.fontawesome.com/cbc9c9e9bf.js" crossorigin="anonymous"></script>
     <script src="resources/scripts/main.js" defer></script>
 </head>
 <body>
+
     <main>
+        <!-- CITY NAME -->
         <div class="block city">
             <h1 class="current-city"></h1>
         </div>
+
+        <!-- SUNRISE  -->
         <div class="block sun">
+            <p>↑</p>
             <i class="fa-solid fa-sun"></i>
             <h2 class="sunrise"></h2>
         </div>
+
+        <!-- CURRENT TEMPERATURE -->
         <div class="block temp">
             <div class="circle">
                 <h2 class="current-temp"></h2>
             </div>
         </div>
+
+        <!-- VISIBILITY RANGE -->
         <div class="block visible-distance">
             <i class="fa-solid fa-eye"></i>
             <h2 class="visibility"></h2>
         </div>
+
+        <!-- PRESSURE -->
         <div class="block pressure-mm">
             <i class="fa-solid fa-gauge"></i>
             <h2 class="pressure"></h2>
         </div>
+
+        <!-- WIND SPEED -->
         <div class="block wind-speed">
             <i class="fa-solid fa-wind" class="wind-icon"></i>
             <h2 class="wind"></h2>
         </div>
+
+        <!-- FORM BLOCK -->
         <div class="block form-block">
             <form action="#" method="GET" class="location-form" >
                 <input type="text" name="city" id="location-input" placeholder="Введите город..." >
                 <input type="submit" value="Отправить" id="submit" />
             </form>
         </div>
+
+        <!-- MINIMUM TEMPERATURE -->
         <div class="block min-temp">
             <h3 class="temp-min"></h3>
+            <sub>min</sub>
         </div>
+
+        <!-- MAXIMUM TEMPERATURE -->
         <div class="block max-temp">
             <h3 class="temp-max"></h3>
+            <sub>max</sub>
         </div>
     </main>
 </body>

@@ -27,16 +27,6 @@ main {
             -.2rem -.2rem 1.8rem var(--white);
 }
 
-.city {
-    grid-column: 5 / 8;
-    border-radius: 1.2em;
-    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
-            -.2rem -.2rem 1.8rem var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 h1 {
     text-align: center;
     font-size: 1.75rem;
@@ -46,6 +36,20 @@ h2 {
     font-size: 1.35em;
     border-radius: 1.2em;
     padding: 0.4em;
+}
+
+sub {
+    font-size: 0.8em;
+}
+
+.city {
+    grid-column: 5 / 8;
+    border-radius: 1.2em;
+    box-shadow: .8rem .8rem 1.4rem var(--greyLight-2), 
+            -.2rem -.2rem 1.8rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sun {

@@ -13,13 +13,15 @@ form.addEventListener("submit", e => {
         .then(data => {
             const { main, name, wind, sys, visibility } = data;
             const sunrise = new Date(sys.sunrise).toLocaleTimeString("ru");
+            const metersToKm = 1000;
+            const hpaToMillimeters = 0.75006;
             document.querySelector(".current-city").innerHTML = name;
-            document.querySelector(".sunrise").innerHTML = sunrise;
-            document.querySelector(".visibility").innerHTML = `${visibility / 1000} км`;
+            document.querySelector(".sunrise").innerHTML =  sunrise;
+            document.querySelector(".visibility").innerHTML = `${visibility / metersToKm} км`;
             document.querySelector(".current-temp").innerHTML = main.temp + "˚C";
             document.querySelector(".temp-max").innerHTML = "↑ " + main.temp_max + "˚C";
             document.querySelector(".temp-min").innerHTML =  "↓ " + main.temp_min + "˚C";
-            document.querySelector(".pressure").innerHTML = `${(main.pressure * 0.75006).toFixed(0)} мм рт.ст.`
+            document.querySelector(".pressure").innerHTML = `${(main.pressure * hpaToMillimeters).toFixed(0)} мм рт.ст.`
             document.querySelector(".wind").innerHTML = wind.speed + "км/ч"
         })
 })
