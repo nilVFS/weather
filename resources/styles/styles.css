@@ -172,6 +172,7 @@ input[type="submit"] {
     -webkit-appearance: none;
     width: 30%;
     margin-top: 1em;
+    font-size: 1em;
     padding: 1em;
     background-color: var(--lightGrey-2);
     border: none;
